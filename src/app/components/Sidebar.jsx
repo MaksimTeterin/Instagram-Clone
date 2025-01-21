@@ -1,10 +1,28 @@
 import React from "react";
 import Sidebarelement from "./Sidebarelement";
+import { BsSearch } from "react-icons/bs";
+import { FaRegCompass } from "react-icons/fa";
+import { SlPaperPlane } from "react-icons/sl";
+import { FaRegHeart } from "react-icons/fa";
+import { CgAddR } from "react-icons/cg";
+import { PiHouseFill } from "react-icons/pi";
+import { PiHouse } from "react-icons/pi";
+import { RiMenuFill } from "react-icons/ri";
+import { FaThreads } from "react-icons/fa6";
+import { MdMenu, MdOutlineSmartDisplay } from "react-icons/md";
+import { RxAvatar } from "react-icons/rx";
+import { FaInstagram } from "react-icons/fa6";
+
+
+
 
 const Sidebar = () => {
   return (
-    <div className="max-h-full h-screen p-2 border-r border-gray-400 grid grid-rows-3">
-      <div>
+    <div className="hidden sm:contents">
+      <div className="max-h-full  lg:w-80 fixed h-screen p-2 border-r border-gray-400 grid">
+      <div className="hidden sm:contents">
+        <div>
+        <div className="hidden lg:contents pl-4 p-6 block">
         <svg
           aria-label="Instagram"
           class="x1lliihq x1n2onr6 x5n08af"
@@ -24,47 +42,66 @@ const Sidebar = () => {
         </svg>
       </div>
       <div>
+      <Sidebarelement
+      icon={<FaInstagram size="22" className="lg:hidden"></FaInstagram>
+      }></Sidebarelement>
+      <Sidebarelement
+          text="Home"
+          icon={<PiHouse size="22"/>}
+></Sidebarelement>
         <Sidebarelement
           text="Search"
-          svg="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z"
-        ></Sidebarelement>
+          icon={<BsSearch size="22"/>}
+></Sidebarelement>
         <Sidebarelement
           text="Explore"
-          svg="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z"
+          icon={<FaRegCompass size="22"/>}
         ></Sidebarelement>
         <Sidebarelement
           text="Reels"
-          svg="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z"
-        ></Sidebarelement>
+          icon={<MdOutlineSmartDisplay size="22"/>}
+></Sidebarelement>
         <Sidebarelement
           text="Messages"
-          svg="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z"
-        ></Sidebarelement>
+          icon={<SlPaperPlane size="22"/>}
+></Sidebarelement>
         <Sidebarelement
           text="Notification"
-          svg="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z"
+          icon={<FaRegHeart size="22"/>}
         ></Sidebarelement>
         <Sidebarelement
           text="Create"
-          svg="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z"
+          icon={<CgAddR size="22"/>}
         ></Sidebarelement>
         <Sidebarelement
           text="Profile"
-          svg="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z"
+          icon={<RxAvatar size="22"/>}
         ></Sidebarelement>
       </div>
-      <div className="">
+      </div>
+      
+      <div className="flex flex-col justify-end">
         <Sidebarelement
           text="Threads"
-          svg="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z"
+          icon={<FaThreads size="22"/>}
         ></Sidebarelement>
         <Sidebarelement
           text="More"
-          svg="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z"
+          icon={<MdMenu size="22"/>}
         ></Sidebarelement>
       </div>
     </div>
+      </div>
+    </div>
+    
+      
   );
 };
+
+  const SidebarIcon = ({ icon }) => (
+    <div className="sidebar-icon">
+      {icon}
+    </div>
+  )
 
 export default Sidebar;

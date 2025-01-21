@@ -3,26 +3,11 @@ import parse from "html-react-parser";
 
 const Sidebarelement = (props) => {
   return (
-    <div className="flex items-center p-4">
-      <div className="pr-4">
-        <svg
-          aria-label="Home"
-          fill="currentColor"
-          height="24"
-          role="img"
-          viewBox="0 0 24 24"
-          width="24"
-        >
-          <title>{props.text}</title>
-          <path
-            clipRule="evenodd"
-            d={props.svg}
-            fill="currentColor"
-            fillRule="evenodd"
-          ></path>
-        </svg>
+    <div className="flex items-center p-4 hover:bg-gray-200 rounded-lg cursor-pointer duration-300">
+      <div className="lg:pr-4">
+        {props.icon}
       </div>
-      <div className="text-lg font-sans">{props.text}</div>
+      <div className="text-lg font-sans hidden absolute  lg:contents lg:static">{props.text}</div>
     </div>
   );
 };

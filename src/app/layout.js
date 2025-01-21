@@ -21,8 +21,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+    
       <body className="grid grid-cols-6 gap-4 ">
-        <Sidebar></Sidebar>
+        <Sidebar className="hidden md:contents"></Sidebar>
         <Main>{children}</Main>
       </body>
     </html>
