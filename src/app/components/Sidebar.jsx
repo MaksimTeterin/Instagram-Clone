@@ -19,12 +19,12 @@ import MediaQuery from "react-responsive";
 const Sidebar = () => {
   return (
     <div className="hidden sm:contents">
-      <div className="max-h-full  lg:w-80 fixed h-screen p-3 border-r border-gray-400 grid">
+      <div className="max-h-full  lg:w-80 fixed h-screen pt-2 pb-2 border-r border-gray-400 grid">
         <div className="hidden sm:contents">
-          <div>
+          <div className="ps-3">
             <MediaQuery query="(max-width: 1023px)">
               <Sidebarelement
-                icon={<FaInstagram size="37px"></FaInstagram>}
+                icon={<FaInstagram size="34px"></FaInstagram>}
               ></Sidebarelement>
             </MediaQuery>
 
@@ -51,35 +51,35 @@ const Sidebar = () => {
             <div>
               <Sidebarelement
                 text="Home"
-                icon={<PiHouse size="37px" />}
+                icon={<PiHouse size="34px" />}
               ></Sidebarelement>
               <Sidebarelement
                 text="Search"
-                icon={<BsSearch size="37px" />}
+                icon={<BsSearch size="34px" />}
               ></Sidebarelement>
               <Sidebarelement
                 text="Explore"
-                icon={<FaRegCompass size="37px" />}
+                icon={<FaRegCompass size="34px" />}
               ></Sidebarelement>
               <Sidebarelement
                 text="Reels"
-                icon={<MdOutlineSmartDisplay size="37px" />}
+                icon={<MdOutlineSmartDisplay size="34px" />}
               ></Sidebarelement>
               <Sidebarelement
                 text="Messages"
-                icon={<SlPaperPlane size="37px" />}
+                icon={<SlPaperPlane size="34px" />}
               ></Sidebarelement>
               <Sidebarelement
                 text="Notification"
-                icon={<FaRegHeart size="37px" />}
+                icon={<FaRegHeart size="34px" />}
               ></Sidebarelement>
               <Sidebarelement
                 text="Create"
-                icon={<CgAddR size="37px" />}
+                icon={<CgAddR size="34px" />}
               ></Sidebarelement>
               <Sidebarelement
                 text="Profile"
-                icon={<RxAvatar size="37px" />}
+                icon={<RxAvatar size="34px" />}
               ></Sidebarelement>
             </div>
           </div>
@@ -87,11 +87,11 @@ const Sidebar = () => {
           <div className="flex flex-col justify-end">
             <Sidebarelement
               text="Threads"
-              icon={<FaThreads size="37px" />}
+              icon={<FaThreads size="34px" />}
             ></Sidebarelement>
             <Sidebarelement
               text="More"
-              icon={<MdMenu size="37px" />}
+              icon={<MdMenu size="34px" />}
             ></Sidebarelement>
           </div>
         </div>

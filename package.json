@@ -6,9 +6,12 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seederdata": "node prisma/seeder.mjs",
+    "removedata": "node prisma/removedata.mjs"
   },
   "dependencies": {
+    "@prisma/client": "^6.2.1",
     "html-react-parser": "^5.2.2",
     "next": "^15.1.5",
     "react": "^19.0.0",
@@ -18,11 +21,13 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@faker-js/faker": "^9.4.0",
     "@types/node": "22.10.7",
     "@types/react": "19.0.7",
     "eslint": "^9",
     "eslint-config-next": "15.1.5",
     "postcss": "^8",
+    "prisma": "^6.2.1",
     "tailwindcss": "^3.4.1"
   }
 }
