@@ -18,8 +18,8 @@ import MediaQuery from "react-responsive";
 
 const Sidebar = () => {
   return (
-    <div className="hidden sm:contents">
-      <div className="max-h-full  lg:w-80 fixed h-screen pt-2 pb-2 border-r border-gray-400 grid">
+    <div className="sm:contents">
+      <div className="max-h-full fixed lg:w-80 h-screen pt-2 pb-2 border-r border-gray-400 grid">
         <div className="hidden sm:contents">
           <div className="ps-3">
             <MediaQuery query="(max-width: 1023px)">
