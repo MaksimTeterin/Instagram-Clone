@@ -15,7 +15,12 @@ const Foryoupage  = async () => {
                 avatarUrl: true,
                 },
             },
+            likes: {
+                select: {
+                userId: true,
+                }
             },
+        }
         }
     );
     return (
