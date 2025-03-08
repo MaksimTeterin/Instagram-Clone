@@ -19,23 +19,24 @@ import MediaQuery from "react-responsive";
 const Sidebar = () => {
   return (
     <div className="sm:contents">
-      <div className="max-h-full fixed lg:w-80 h-screen pt-2 pb-2 border-r border-gray-400 grid">
+      <div className="fixed lg:w-[245px] max-h-full h-screen border-r border-gray-400 grid">
         <div className="hidden sm:contents">
-          <div className="ps-3">
+          <div className="pt-[8px] pb-[20px] pr-[12px] pl-[12px]">
             <MediaQuery query="(max-width: 1023px)">
               <Sidebarelement
-                icon={<FaInstagram size="34px"></FaInstagram>}
+                icon={<FaInstagram size="24px"></FaInstagram>}
               ></Sidebarelement>
             </MediaQuery>
 
             <MediaQuery query="(min-width: 1024px)">
-              <div className="p-9 ps-4">
+              <div className="pt-[25px] pl-[12px] p-[16px] p-[12px]">
                 <svg
                   aria-label="Instagram"
                   fill="currentColor"
                   role="img"
                   viewBox="32 4 113 32"
-                  width="125"
+                  width="103"
+                  height="32"
                 >
                   <title>Instagram</title>
                   <path
@@ -51,49 +52,52 @@ const Sidebar = () => {
             <div>
               <Sidebarelement
                 text="Home"
-                icon={<PiHouse size="34px" />}
+                icon={<PiHouse size="24px" />}
               ></Sidebarelement>
               <Sidebarelement
                 text="Search"
-                icon={<BsSearch size="34px" />}
+                icon={<BsSearch size="24px" />}
               ></Sidebarelement>
               <Sidebarelement
                 text="Explore"
-                icon={<FaRegCompass size="34px" />}
+                icon={<FaRegCompass size="24px" />}
               ></Sidebarelement>
               <Sidebarelement
                 text="Reels"
-                icon={<MdOutlineSmartDisplay size="34px" />}
+                icon={<MdOutlineSmartDisplay size="24px" />}
               ></Sidebarelement>
               <Sidebarelement
                 text="Messages"
-                icon={<SlPaperPlane size="34px" />}
+                icon={<SlPaperPlane size="24px" />}
               ></Sidebarelement>
               <Sidebarelement
                 text="Notification"
-                icon={<FaRegHeart size="34px" />}
+                icon={<FaRegHeart size="24px" />}
               ></Sidebarelement>
               <Sidebarelement
                 text="Create"
-                icon={<CgAddR size="34px" />}
+                icon={<CgAddR size="24px" />}
               ></Sidebarelement>
               <Sidebarelement
                 text="Profile"
-                icon={<RxAvatar size="34px" />}
+                icon={<RxAvatar size="24px" />}
               ></Sidebarelement>
             </div>
           </div>
 
-          <div className="flex flex-col justify-end">
+          <div className="flex flex-col justify-end pb-[20px] pr-[12px] pl-[12px]">
             <Sidebarelement
               text="Threads"
-              icon={<FaThreads size="34px" />}
+              icon={<FaThreads size="24px" />}
             ></Sidebarelement>
             <Sidebarelement
               text="More"
-              icon={<MdMenu size="34px" />}
+              icon={<MdMenu size="24px" />}
             ></Sidebarelement>
           </div>
+
+
+
         </div>
       </div>
     </div>
