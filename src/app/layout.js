@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <div className="flex h-screen">
           <Sidebar className="md:contents"></Sidebar> {/* A fixed sidebar */}
-          <Main>{children}</Main>
+          {children}
         </div>
       </body>
     </html>
