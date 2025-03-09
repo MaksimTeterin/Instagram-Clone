@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Sidebarelement from "./Sidebarelement";
 import { BsSearch } from "react-icons/bs";
 import { FaRegCompass } from "react-icons/fa";
@@ -15,30 +15,10 @@ import { MdMenu, MdOutlineSmartDisplay } from "react-icons/md";
 import { RxAvatar } from "react-icons/rx";
 import { FaInstagram } from "react-icons/fa6";
 import MediaQuery from "react-responsive";
-import { useRouter } from 'next/navigation';
 import Link from "next/link";
 
 
 const Sidebar = () => {
-
-  const [active, setActive] = useState("");
-  const router = useRouter();
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const currentPath = window.location.pathname;
-      if (currentPath !== '/' + active) {
-        router.push('/' + active);
-      }
-    }
-    console.log(active);
-  }, [active, router]);
-
-  function handleActive(value) {
-    console.log(value);
-    setActive(value);
-  }
-
   return (
     <div className="sm:contents">
       <div className="fixed lg:w-[245px] max-h-full h-screen border-r border-gray-400 grid">
@@ -90,9 +70,9 @@ const Sidebar = () => {
           </div>
 
           <div className="flex flex-col justify-end pb-[20px] pr-[12px] pl-[12px]">
-            <Link href="/">            <Sidebarelement text="Threads" icon={<FaThreads size="24px" />} />
+            <Link href="/"><Sidebarelement text="Threads" icon={<FaThreads size="24px" />} />
             </Link>
-            <Link href="/">            <Sidebarelement text="More" icon={<MdMenu size="24px" />} />
+            <Link href="/"><Sidebarelement text="More" icon={<MdMenu size="24px" />} />
             </Link>
           </div>
 
