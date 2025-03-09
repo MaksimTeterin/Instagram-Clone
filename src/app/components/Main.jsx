@@ -3,7 +3,7 @@ import ContentPage from "./ContentPage";
 
 const Main = () => {
   return (
-    <div className="ml-[319.375px] p-8 w-screen">
+    <div className="lg:ml-[319.375px] sm:ml-[72px] p-8 w-screen">
       <div className="flex w-full justify-center">
         <div className="w-[630px]">
           <ContentPage></ContentPage>

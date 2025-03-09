@@ -18,10 +18,11 @@ import MediaQuery from "react-responsive";
 import Link from "next/link";
 
 
+
 const Sidebar = () => {
   return (
     <div className="sm:contents">
-      <div className="fixed lg:w-[245px] max-h-full h-screen border-r border-gray-400 grid">
+      <div className="fixed lg:w-[245px] sm:w-[72px] h-full sm:border-r sm:border-gray-400 grid">
         <div className="hidden sm:contents">
           <div className="pt-[8px] pb-[20px] pr-[12px] pl-[12px]">
             <MediaQuery query="(max-width: 1023px)">

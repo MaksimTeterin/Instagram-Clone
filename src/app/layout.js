@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className="flex h-screen">
+        <div className="flex 100vh">
           <Sidebar className="md:contents"></Sidebar> {/* A fixed sidebar */}
           {children}
         </div>
