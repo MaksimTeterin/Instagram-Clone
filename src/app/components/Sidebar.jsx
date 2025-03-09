@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Sidebarelement from "./Sidebarelement";
 import { BsSearch } from "react-icons/bs";
 import { FaRegCompass } from "react-icons/fa";
@@ -15,8 +15,30 @@ import { MdMenu, MdOutlineSmartDisplay } from "react-icons/md";
 import { RxAvatar } from "react-icons/rx";
 import { FaInstagram } from "react-icons/fa6";
 import MediaQuery from "react-responsive";
+import { useRouter } from 'next/navigation';
+import Link from "next/link";
+
 
 const Sidebar = () => {
+
+  const [active, setActive] = useState("");
+  const router = useRouter();
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const currentPath = window.location.pathname;
+      if (currentPath !== '/' + active) {
+        router.push('/' + active);
+      }
+    }
+    console.log(active);
+  }, [active, router]);
+
+  function handleActive(value) {
+    console.log(value);
+    setActive(value);
+  }
+
   return (
     <div className="sm:contents">
       <div className="fixed lg:w-[245px] max-h-full h-screen border-r border-gray-400 grid">
@@ -50,50 +72,28 @@ const Sidebar = () => {
             </MediaQuery>
 
             <div>
-              <Sidebarelement
-                text="Home"
-                icon={<PiHouse size="24px" />}
-              ></Sidebarelement>
-              <Sidebarelement
-                text="Search"
-                icon={<BsSearch size="24px" />}
-              ></Sidebarelement>
-              <Sidebarelement
-                text="Explore"
-                icon={<FaRegCompass size="24px" />}
-              ></Sidebarelement>
-              <Sidebarelement
-                text="Reels"
-                icon={<MdOutlineSmartDisplay size="24px" />}
-              ></Sidebarelement>
-              <Sidebarelement
-                text="Messages"
-                icon={<SlPaperPlane size="24px" />}
-              ></Sidebarelement>
-              <Sidebarelement
-                text="Notification"
-                icon={<FaRegHeart size="24px" />}
-              ></Sidebarelement>
-              <Sidebarelement
-                text="Create"
-                icon={<CgAddR size="24px" />}
-              ></Sidebarelement>
-              <Sidebarelement
-                text="Profile"
-                icon={<RxAvatar size="24px" />}
-              ></Sidebarelement>
+              <Link href="/"><Sidebarelement text="Home" icon={<PiHouseFill size="24px" />} /></Link>
+              <Link href="/explore"><Sidebarelement text="Explore" icon={<BsSearch size="24px" />} /></Link>
+              <Link href="direct"><Sidebarelement text="Direct" icon={<FaRegCompass size="24px" />} />
+              </Link>
+              <Link href="reels"><Sidebarelement text="Reels" icon={<MdOutlineSmartDisplay size="24px" />} />
+              </Link>
+              <Link href="messages"><Sidebarelement text="Messages" icon={<SlPaperPlane size="24px" />} />
+              </Link>
+              <Link href="/"><Sidebarelement text="Notification" icon={<FaRegHeart size="24px" />} />
+              </Link>
+              <Link href="/"><Sidebarelement text="Create" icon={<CgAddR size="24px" />} />
+              </Link>
+              <Link href="random_name"><Sidebarelement text="Profile" icon={<RxAvatar size="24px" />} />
+              </Link>
             </div>
           </div>
 
           <div className="flex flex-col justify-end pb-[20px] pr-[12px] pl-[12px]">
-            <Sidebarelement
-              text="Threads"
-              icon={<FaThreads size="24px" />}
-            ></Sidebarelement>
-            <Sidebarelement
-              text="More"
-              icon={<MdMenu size="24px" />}
-            ></Sidebarelement>
+            <Link href="/">            <Sidebarelement text="Threads" icon={<FaThreads size="24px" />} />
+            </Link>
+            <Link href="/">            <Sidebarelement text="More" icon={<MdMenu size="24px" />} />
+            </Link>
           </div>
 
 
