@@ -16,10 +16,19 @@ import { RxAvatar } from "react-icons/rx";
 import { FaInstagram } from "react-icons/fa6";
 import MediaQuery from "react-responsive";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { usePathname, useSearchParams } from 'next/navigation'
 
 
 
 const Sidebar = () => {
+  const router = usePathname()
+  console.log(router)
+  function handleClick() {
+
+    console.log("clicked");
+  }
+
   return (
     <div className="sm:contents">
       <div className="fixed lg:w-[245px] sm:w-[72px] h-full sm:border-r sm:border-gray-400 grid">
@@ -54,8 +63,8 @@ const Sidebar = () => {
 
             <div>
               <Link href="/"><Sidebarelement text="Home" icon={<PiHouseFill size="24px" />} /></Link>
-              <Link href="/explore"><Sidebarelement text="Explore" icon={<BsSearch size="24px" />} /></Link>
-              <Link href="direct"><Sidebarelement text="Direct" icon={<FaRegCompass size="24px" />} />
+              <Link href="/explore"><Sidebarelement text="Search" icon={<BsSearch size="24px" />} /></Link>
+              <Link href="direct"><Sidebarelement text="Explore" icon={<FaRegCompass size="24px" />} />
               </Link>
               <Link href="reels"><Sidebarelement text="Reels" icon={<MdOutlineSmartDisplay size="24px" />} />
               </Link>

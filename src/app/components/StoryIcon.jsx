@@ -18,8 +18,8 @@ const StoryIcon = async () => {
   elements.push(
     <div className="flex w-[630px]" key={faker.number.int(1, 1000)}>
       {users.map((user, index) => (
-        <div           className={`flex flex-col items-center ${index !== 0 && index !== users.length ? 'mx-3' : 'mr-3'}`}
-        key={user.username}>
+        <div className={`flex flex-col items-center ${index !== 0 && index !== users.length ? 'mx-3' : 'mr-3'}`}
+          key={user.username}>
           <img
             src={user.avatarUrl}
             alt=""
