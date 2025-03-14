@@ -12,7 +12,8 @@ const ContentPage = () => {
       <div className="mt-[20px]"></div>
       <div>
         <StoryIcon></StoryIcon>
-        <Foryoupage></Foryoupage>
+        <div className="mt-[20px]"><Foryoupage></Foryoupage>
+        </div>
       </div>
     </div >
   );
