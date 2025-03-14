@@ -9,7 +9,7 @@ const ContentPage = () => {
     <div className="w-[630px] mt-[10px]">
       <ChoosePageComponent></ChoosePageComponent>
       <hr />
-      <div className="mt-[32px]"></div>
+      <div className="mt-[20px]"></div>
       <div>
         <StoryIcon></StoryIcon>
         <Foryoupage></Foryoupage>
