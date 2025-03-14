@@ -23,7 +23,7 @@ const ChoosePageComponent = () => {
         , []);
 
     return (
-        <div>
+        <div className="h-[44px] justify-between flex items-center">
             <div className="flex pb-2">
                 {chosenPage === "/?variant=home" ? (
                     <div>
@@ -37,7 +37,6 @@ const ChoosePageComponent = () => {
                     </div>
                 )}
             </div>
-            <hr className="" />
         </div>
     );
 }

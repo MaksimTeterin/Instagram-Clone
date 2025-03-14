@@ -13,8 +13,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className="flex 100vh">
-          <Sidebar className="md:contents"></Sidebar> {/* A fixed sidebar */}
-          {children}
+          <Sidebar className="md:contents "></Sidebar> {/* A fixed sidebar */}
+          <div className="lg:ml-[244px] sm:ml-[72px] pt-[22px] w-screen">
+            {children}
+          </div>
         </div>
       </body>
     </html>
