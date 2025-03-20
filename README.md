@@ -35,14 +35,17 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-
-
-
-
-
 ## MVP
 
 1. Create account (add profile picture, description)
 2. Create content (upload stories (plain photo), upload videos and photos as posts)
 3. Like, subscribe, comment, share functionality
 4. Message functionality
+
+## Current TODO List
+
+1. Make search bar (without back-end so far)
+2. Make custom break points for responsive design (Ask Kaspar next monday)
+3. Make explore page
+4. Make profile page
+5. Start developing backend
